@@ -1,9 +1,13 @@
+using BusinessLayer.Interfaces;
+using BusinessLayer.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RepositoryLayer.Interfaces;
+using RepositoryLayer.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +28,8 @@ namespace EmployeePayRoll_MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddTransient<IEmployeeRL, EmployeeRL>();
+            services.AddTransient<IEmployeeBL, EmployeeBL>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,7 +56,7 @@ namespace EmployeePayRoll_MVC
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Employee}/{action=Index}/{id?}");
             });
         }
     }
