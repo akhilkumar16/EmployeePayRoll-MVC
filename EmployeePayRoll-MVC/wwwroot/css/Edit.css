@@ -13,6 +13,9 @@
 .form-group {
     width: 340px;
     margin-left: 360px;
+     border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
 }
 
 .control-label {

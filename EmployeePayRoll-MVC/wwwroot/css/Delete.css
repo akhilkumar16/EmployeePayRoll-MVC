@@ -1,2 +1,26 @@
-﻿body {
+﻿.deletebody {
+    padding-left: 10px;
+    text-align: center;
+}
+
+.head {
+    text-align: start;
+}
+
+.row3 {
+    text-align: left;
+    background-color: #b6d7a8;
+}
+.row {
+    margin-right: -1200px;
+    margin-left: 300px;
+}
+.btn btn-danger {
+    text-align: center;
+}
+.btn-danger {
+    width: 64px;
+    height: 38px;
+    margin-left: 420px;
+    border-radius: 0.25rem;
 }

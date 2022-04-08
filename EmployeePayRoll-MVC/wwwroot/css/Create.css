@@ -1,22 +1,41 @@
-﻿﻿.create {
+﻿﻿createbody {
     padding-left: 10px;
     text-align: center;
 }
-
 .head {
     text-align: center;
 }
-
-.row {
-    text-align: start;
-    background-color: #b6d7a8;
+.row1 {
+    /*    text-align: start;
+*/ background-color: #b6d7a8;
+    justify-content: center;
 }
-
-.form-group {
-    width: 340px;
-    margin-left: 360px;
+.createform-group {
+    width: 360px;
+    margin-left: 380px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
+    border: 0px solid green;
+    margin-right: 16px;
 }
-
 .control-label {
     text-align: start;
+    padding:10px;
 }
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+.btn-danger {
+    width: 64px;
+    height: 38px;
+    margin-left: 220px;
+    border-radius: 0.25rem;
+}
+
+

@@ -13,7 +13,7 @@ namespace RepositoryLayer.Services
     {
         private readonly IConfiguration _config;
         public string ConnectionStringName { get; set; } = "EmployeePayRoll-MVC";
-        public EmployeeRL(IConfiguration config)
+        public EmployeeRL(IConfiguration config) // Iconfiguration is taken from appsettings.json;
         {
             _config = config;
         }

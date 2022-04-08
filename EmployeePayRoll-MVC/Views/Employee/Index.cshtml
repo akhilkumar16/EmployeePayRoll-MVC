@@ -3,8 +3,16 @@
 @{
     ViewData["Title"] = "Index";
 }
+<div class="head" flex-direction:row;>
 
-<h1>Index</h1>
+    <img src="~/assets/logo.png" style="width:50px;height:47px" />
+
+    <span style="color: #82A70C">EMPLOYEE</span>
+    <span style="color: #42515F"> PAYROLL</span>
+</div>
+<div class="bodyindex">
+    <h3>Index</h3>
+</div>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -40,38 +48,42 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmpId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProfileImage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gender)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Department)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Salary)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Startdate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Notes)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.EmpId}) |
-                @Html.ActionLink("Details", "Details", new {  id=item.EmpId}) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.EmpId })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmpId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProfileImage)
+                </td>
+                <td>
+                    <img src="@Url.Content(item.ProfileImage)"/>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Department)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Startdate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Notes)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.EmpId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.EmpId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.EmpId })
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
