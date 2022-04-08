@@ -1,0 +1,22 @@
+﻿﻿.create {
+    padding-left: 10px;
+    text-align: center;
+}
+
+.head {
+    text-align: center;
+}
+
+.row {
+    text-align: start;
+    background-color: #b6d7a8;
+}
+
+.form-group {
+    width: 340px;
+    margin-left: 360px;
+}
+
+.control-label {
+    text-align: start;
+}
